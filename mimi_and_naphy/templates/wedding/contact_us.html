@@ -1,0 +1,144 @@
+{% extends "shared/base.html" %}
+{% load staticfiles %}
+{% load crispy_forms_tags %}
+{% block title  %}Mimie & Naphy -Contact{% endblock %}
+{% block content %}
+<!--/counter-->
+<div class="agileinfo_counter_section">
+    <div class="container">
+            <div class="col-md-4">
+                </div>
+                <div class="col-md-4 mn-center">
+        <h3>Contact Us</h3>
+    </div>
+    <div class="col-md-4">   
+        </div>
+     
+    </div>
+</div>
+<!--//counter-->
+<!-- contact -->
+<div class="contact-w3l" id="contact">
+    <div class="row">
+  
+       
+                <h3 class="wthree_title_agile"><span>C</span>ontact</h3>
+      
+    </div>
+
+  
+
+    <div class="container">
+        <div class="col-md-6 contact-agileits-w3layouts">
+            <div id="horizontalTab">
+                <ul class="resp-tabs-list">
+                    <li>
+                        <h6>Harare</h6>
+                    </li>
+                    <!-- <li>
+                        <h6>Canada</h6>
+                    </li>
+                    <li>
+                        <h6>UK</h6>
+                    </li> -->
+                </ul>
+                <div class="resp-tabs-container">
+
+                    <div class="tab2">
+                        <p class="para-agileits-w3layouts"><i class="fa fa-map-marker" aria-hidden="true"></i>25095 Blue Ravine Rd, Folsom, CA 95630, USA</p>
+                        <p class="para-agileits-w3layouts"><i class="fa fa-phone" aria-hidden="true"></i>032 625 4592</p>
+                        <p class="para-agileits-w3layouts"><i class="fa fa-envelope-o" aria-hidden="true"></i><a href="mailto:mail@example.com">info@example.com</a></p>
+                        <div class="agileits-social">
+                            <ul>
+                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                            
+                            </ul>
+                        </div>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1859251.8642025779!2d-76.08274894689792!3d40.06224332601239!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c0fb959e00409f%3A0x2cd27b07f83f6d8d!2sNew+Jersey%2C+USA!5e0!3m2!1sen!2sin!4v1474436926209"
+                            allowfullscreen></iframe>
+
+                    </div>
+                    <div class="tab3">
+                        <p class="para-agileits-w3layouts"><i class="fa fa-map-marker" aria-hidden="true"></i>123 San Sebastian, New York City USA.</p>
+                        <p class="para-agileits-w3layouts"><i class="fa fa-phone" aria-hidden="true"></i>333 222 3333</p>
+                        <p class="para-agileits-w3layouts"><i class="fa fa-envelope-o" aria-hidden="true"></i><a href="mailto:mail@example.com">info@example.com</a></p>
+                        <div class="agileits-social">
+                            <ul>
+                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                               
+                            </ul>
+                        </div>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3023.9503398796587!2d-73.9940307!3d40.719109700000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a27e2f24131%3A0x64ffc98d24069f02!2sCANADA!5e0!3m2!1sen!2sin!4v1441710758555"
+                            allowfullscreen></iframe>
+                    </div>
+                    <div class="tab4">
+                        <p class="para-agileits-w3layouts"><i class="fa fa-map-marker" aria-hidden="true"></i>8921 California Long Beach PO Box 8921</p>
+                        <p class="para-agileits-w3layouts"><i class="fa fa-phone" aria-hidden="true"></i>012 345 6789</p>
+                        <p class="para-agileits-w3layouts"><i class="fa fa-envelope-o" aria-hidden="true"></i><a href="mailto:mail@example.com">info@example.com</a></p>
+                        <div class="agileits-social">
+                            <ul>
+                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                             
+                            </ul>
+                        </div>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26370863.006641828!2d-113.70834778640587!3d36.212776709411365!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54eab584e432360b%3A0x1c3bb99243deb742!2sUnited+States!5e0!3m2!1sen!2sin!4v1497420724957"
+                            allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col-md-6 regstr-r-w3-agileits">
+            <div class="form-bg-w3ls">
+                <h3 class="subhead-agileits white-w3ls">Get in Touch</h3>
+                <!-- <form action="#" method="post">
+                    <input type="text" name="Name" placeholder="Name" required="">
+                    <input type="email" name="Email" placeholder="Email" required="">
+                    <input type="text" name="Subject" placeholder="Subject" required="">
+                    <textarea name="Message" placeholder="Message" required=""></textarea>
+                    <input type="submit" value="Submit" class="button-w3layouts hvr-rectangle-out">
+                </form> -->
+                {% if form.errors %}
+                {{form.errors}}
+                {% endif %}
+                
+                {% if messages %}
+                {% for message in messages %}
+                <div class="alert alert-{{ message.tags }} alert-dismissible" role="alert">
+                  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                  {{ message }}
+                </div>
+                {% endfor %}
+                {% endif %}
+                <form action="." method="POST">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        {{ form.name|as_crispy_field}}
+                        </div>
+                    <div class="form-group">
+                    {{ form.email|as_crispy_field}}
+                    </div>
+                    <div class="form-group">
+                     {{ form.phone|as_crispy_field}}
+                    </div>
+                  
+                    <div class="form-group">
+                     {{ form.message|as_crispy_field}}
+                    </div>
+                    <input type="submit" value="Send message" class="btn btn-default btn-block" style="color:#FFD700; background-color:#002366;"/>
+                  </form>
+            </div>
+        </div>
+
+        
+        <div class="clearfix"></div>
+    </div>
+</div>
+<!-- //contact -->
+{% endblock %}

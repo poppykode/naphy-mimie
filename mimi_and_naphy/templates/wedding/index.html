@@ -1,0 +1,196 @@
+{% extends "shared/base.html" %}
+{% load staticfiles %}
+{% block title  %}Mimie & Naphy{% endblock %}
+{% block content %}
+<!--banner-->
+<div class="banner">
+    <div data-vide-bg="{% static 'images/bg1.jpeg' %}">
+        <div class="center-container">
+            <div class="banner-text">
+                <div id="top" class="callbacks_container">
+                    <ul class="rslides" id="slider3">
+                        <li>
+                            <div class="banner-text-info">
+                                <h3 class="bnr-title">Save the Date!</h3>
+                                <p> 02 December 2018 - 10am</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="banner-text-info">
+                                <h3 class="bnr-title">Ceremony & Reception</h3>
+                                <p>Mumvuri Wedombo</p>
+                                <!-- <small>Time: 10am</small> -->
+                            </div>
+                        </li>
+                        <li>
+                            <div class="banner-text-info">
+                                <h3 class="bnr-title">Naphy & Mimie</h3>
+                                <p>Express your love in the most special way </p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <div class="we-po-head">
+        <img src="{% static 'images/m1.png' %}" alt=" ">
+    </div> -->
+</div>
+<!--//banner-->
+	<!-- about -->
+	<div class="about_section" id="about">
+		<div class="container">
+			<h2 class="wthree_title_agile"><span>O</span>ur <span>S</span>tory</h2>
+			<div class="inner_w3l_agile_grids">
+				<!-- Bottom to top-->
+				<div class="col-md-5 team-grid">
+					<!-- normal -->
+					<div class="ih-item circle effect10 bottom_to_top">
+						<div class="img"><img src="{% static 'images/a2.png' %}" alt="img" style="border: 3px solid #FFD700;border-radius: 50%;" /></div>
+					</div>
+					<!-- end normal -->
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed efficitur velit ac fringilla fermentum.</p>
+					<div class="icons">
+						<ul>
+                            <li><a href="#"></a></li>
+							<li class="team-twitter"><a href="#"><img src="{% static 'images/bow.png' %}" alt="" srcset=""></a></li>
+							<li><a href="#"></a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-md-2 team-grid">
+					<!-- normal -->
+					<div class="info">
+						<h3>Naphitali</h3>
+						<div class="arrow-container animated fadeInDown">
+							<a href="#home" class="arrow-2 scroll">
+							<i class="fa fa-heart-o" aria-hidden="true"></i>
+						</a>
+							<div class="arrow-1 animated hinge infinite zoomIn"></div>
+						</div>
+						<h4>Michelle</h4>
+					</div>
+				</div>
+				<div class="col-md-5 team-grid">
+					<!-- normal -->
+					<div class="ih-item circle effect10 bottom_to_top">
+						<div class="img"><img src="{% static 'images/a1.jpeg' %}" alt="img" style="border: 3px solid #FFD700;border-radius: 50%;" /></div>
+					</div>
+					<!-- end normal -->
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed efficitur velit ac fringilla fermentum.</p>
+					<div class="icons">
+						<ul>
+							<li><a href="#"></a></li>
+							<li class="team-twitter"><a href="#"><img src="{% static 'images/bow.png' %}" alt="" srcset=""></a></li>
+							<li><a href="#"></a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+		</div>
+		<div class="banner-bottom">
+			<!--//screen-gallery-->
+			<div class="inner_w3l_agile_grids">
+				<div class="sreen-gallery-cursual">
+					<div id="owl-demo" class="owl-carousel">
+						<div class="item-owl">
+							<div class="test-review">
+								<img src="{% static 'images/a13.jpeg' %}" alt="" class="mimi-shadow" />
+							</div>
+						</div>
+						<div class="item-owl">
+							<div class="test-review">
+								<img src="{% static 'images/a11.jpeg' %}" alt="" class="mimi-shadow" />
+							</div>
+						</div>
+						<div class="item-owl">
+							<div class="test-review">
+								<img src="{% static 'images/a12.jpeg' %}" alt="" class="mimi-shadow" />
+							</div>
+						</div>
+						<div class="item-owl">
+							<div class="test-review">
+								<img src="{% static 'images/s7.jpg' %}" alt="" class="mimi-shadow"/>
+							</div>
+						</div>
+						<!-- <div class="item-owl">
+							<div class="test-review">
+								<img src="{% static 'images/s5.jpg' %}" alt="" class="mimi-shadow"/>
+							</div>
+						</div>
+						<div class="item-owl">
+							<div class="test-review">
+								<img src="{% static 'images/s8.jpg' %}" alt="" class="mimi-shadow"/>
+							</div>
+						</div>
+						<div class="item-owl">
+							<div class="test-review">
+								<img src="{% static 'images/s6.jpg' %}" alt="" class="mimi-shadow"/>
+							</div>
+						</div>
+						<div class="item-owl">
+							<div class="test-review">
+								<img src="{% static 'images/s4.jpg' %}" alt="" class="mimi-shadow"/>
+							</div>
+						</div> -->
+					</div>
+				</div>
+			</div>
+			<!--//screen-gallery-->
+		</div>
+		<!-- //story -->
+		<div class="w3l-poi">
+			<img src="{% static 'images/a3.png' %}" alt=" ">
+		</div>
+	</div>
+    <!-- //about -->
+    	<!-- team -->
+	<div class="team" id="team">
+		<div class="container">
+            <h3 class="wthree_title_agile"><span>B</span>ridal <span>T</span>eam</h3>
+            
+			{% if bridal_team_list %}
+		<div class="row">
+			<div class="agile_team_grids">
+					{% for team in bridal_team_list %}
+				<div class="col-md-3 agile_team_grid team-left-w3l-agile" style="margin-bottom:2%;">
+					<div class="agile_team_grid_main">
+						<img src="{{team.image.url}}" alt=" " class="img-responsive" />
+						<div class="p-mask">
+							<ul class="social-icons">
+								<li><a href="{{team.facebook_link}}"><i class="fa fa-facebook"></i></a></li>
+								<li> <a href="{{team.twitter_link}}"><i class="fa fa-twitter"></i></a> </li>
+
+								<li><a href="#"></a> </li>
+
+							</ul>
+						</div>
+					</div>
+					<div class="agile_team_grid1">
+						<h3>{{team.name|title}}</h3>
+						
+					</div>
+				</div>
+				
+				
+				{% endfor %}
+				
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+			{% else %}
+			<div class="row">
+				<div class="col-md-4"></div>
+				<div class="col-md-4">
+						<h1 style="color:#FFD700;">no images uploaded</h1>
+				</div>
+				<div class="col-md-4"></div>
+
+			</div>
+			{% endif %}
+		</div>
+	</div>
+
+{% endblock %}

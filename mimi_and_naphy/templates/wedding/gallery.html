@@ -1,0 +1,58 @@
+{% extends "shared/base.html" %}
+{% load staticfiles %}
+{% block title  %}Mimie & Naphy -Gallery{% endblock %}
+{% block content %}
+<!--/counter-->
+<div class="agileinfo_counter_section">
+    <div class="container">
+      
+        <div class="row">
+				<div class="col-md-4"></div>
+				<div class="col-md-4">
+					<h3 style="padding-left: 25%;" >Gallery</h3>
+				</div>
+				<div class="col-md-4"></div>
+				  
+			  </div>
+    </div>
+</div>
+<!--//counter-->
+	<!-- Gallery -->
+	<div id="gallery" class="gallery">
+		<div class="container">
+
+			{% if gallery_list %}
+			{% for img in gallery_list %}
+			<div class="gallery-w3lsrow">
+				<div class="col-sm-3 col-xs-4 gallery-grids">
+					<div class="w3ls-hover">
+						<a href="{{img.image.url}}" data-lightbox="example-set" data-title="{{img.description}}.">
+						<img src="{{img.image.url}}" class="img-responsive zoom-img" alt=""/>
+						<div class="view-caption">
+							<h5>{{img.caption}}</h5>
+							<span class="fa fa-heart"></span>
+						</div>
+					</a>
+					</div>
+				</div>
+
+			
+
+			</div>
+			{% endfor %}
+			<div class="clearfix"> </div>
+			{% else %}
+			<div class="row">
+				<div class="col-md-4"></div>
+				<div class="col-md-4">
+						<h1 style="color:#fff;">no images uploaded</h1>
+				</div>
+				<div class="col-md-4"></div>
+
+			</div>
+			
+			{% endif %}
+		</div>
+	</div>
+	<!-- //gallery -->
+{% endblock %}
